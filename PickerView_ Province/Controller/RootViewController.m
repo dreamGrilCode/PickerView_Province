@@ -133,7 +133,10 @@
         [self getAreaDate:0];
         [pickerView reloadComponent:2];
         [pickerView selectRow:0 inComponent:2 animated:YES];
-        
+        if ([self.provinceList[self.selectOneRow][@"type"] intValue] == 0) {
+            
+            self.selectTwoRow = 0;
+        }
         oneRow = row;
         tweRow = 0;
         threeRow = 0;
